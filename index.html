@@ -160,49 +160,52 @@
 
   <section class="container pt-5">
     <div class="d-flex flex-wrap align-items-center justify-content-around">
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#languageModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#languageModal">
         <span class="nav-link__caption">Wybierz język</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#categoryModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#categoryModal">
         <span class="nav-link__caption">Kategorie biletów</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#regionModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#featureModal">
+        <span class="nav-link__caption">Atrakcje parku</span>
+      </a>
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#regionModal">
         <span class="nav-link__caption">Rejon Polski</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#sideBar">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#sideBar">
         <span class="nav-link__caption">Menu</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#profileModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#profileModal">
         <span class="nav-link__caption">Profil - dane</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#profileLoginModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#profileLoginModal">
         <span class="nav-link__caption">Profil - zaloguj</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#buyStepModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#buyStepModal">
         <span class="nav-link__caption">Krok zakupów</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#basketModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#basketModal">
         <span class="nav-link__caption">Koszyk</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#basketTicketModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#basketTicketModal">
         <span class="nav-link__caption">Koszyk - bilet</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#ticketAddedModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#ticketAddedModal">
         <span class="nav-link__caption">Koszyk - bilet dodany</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#shoppingSummaryModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#shoppingSummaryModal">
         <span class="nav-link__caption">Podsumowanie zakupów</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#cashPointsModal">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#cashPointsModal">
         <span class="nav-link__caption">Punkty kasowe</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#paymentFailed">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#paymentFailed">
         <span class="nav-link__caption">Płatność nie powiodła się</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#paymentMethods">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#paymentMethods">
         <span class="nav-link__caption">Metody płatności</span>
       </a>
-      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#selectPaymentMethods">
+      <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#selectPaymentMethods">
         <span class="nav-link__caption">Wybierz methodę płatności</span>
       </a>
     </div>
@@ -282,7 +285,7 @@
   <!--// Select language modal end -->
 
 
-  <!--// Select park feature modal -->
+  <!--// Select ticket category modal -->
   <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModal"
     aria-hidden="true">
     <div class="modal-dialog">
@@ -405,7 +408,162 @@
       </div>
     </div>
   </div>
+  <!--// Select ticket category modal end -->
+
+  <!--// Select park feature modal -->
+  <div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="parkFeatures">Filtry - Atrakcje parku</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body" style="height: 50vh; overflow: auto;">
+          <div class="list-group list-group-flush">
+            <a href class="list-group-item list-group-item-action is-active" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-done_all"></span>
+                  </i>
+                  Wszystkie atrakcje (8)
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-tent"></span>
+                  </i>
+                  Biwakowanie
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-camera"></span>
+                  </i>
+                  Fotografowanie (sesja zdjęciowa)
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-museum"></span>
+                  </i>
+                  Muzeum parku
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-kayak"></span>
+                  </i>
+                  Spływy kajakowe
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-river"></span>
+                  </i>
+                  Szlaki wodne
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-river_road"></span>
+                  </i>
+                  Ścieżki przyrodnicze
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-fishing"></span>
+                  </i>
+                  Wędkowanie
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-salling"></span>
+                  </i>
+                  Żeglowanie
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">
+            Potwierdź wybór (8)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
   <!--// Select park feature modal end -->
+
+
 
 
   <!--// Select country region modal -->
