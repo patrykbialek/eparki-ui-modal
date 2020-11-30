@@ -5,16 +5,16 @@
   <meta name="viewport" content="width=device-width, initial-scale=1">
   <title>e-Parki - okna modalne</title>
   <link rel="apple-touch-icon" sizes="180x180"
-    href="https://patrykbialek.github.io/eparki-ui/assets/img/apple-touch-icon.png">
+    href="https://patrykbialek.github.io/eparki-ui-final/images/apple-touch-icon.png">
   <link rel="icon" type="image/png" sizes="32x32"
-    href="https://patrykbialek.github.io/eparki-ui/assets/img/favicon-32x32.png">
+    href="https://patrykbialek.github.io/eparki-ui-final/images/favicon-32x32.png">
   <link rel="icon" type="image/png" sizes="16x16"
-    href="https://patrykbialek.github.io/eparki-ui/assets/img/favicon-16x16.png">
-  <link rel="manifest" href="https://patrykbialek.github.io/eparki-ui/assets/img/site.webmanifest">
-  <link rel="mask-icon" href="https://patrykbialek.github.io/eparki-ui/assets/img/safari-pinned-tab.svg"
+    href="https://patrykbialek.github.io/eparki-ui-final/images/favicon-16x16.png">
+  <link rel="manifest" href="https://patrykbialek.github.io/eparki-ui-final/images/site.webmanifest">
+  <link rel="mask-icon" href="https://patrykbialek.github.io/eparki-ui-final/images/safari-pinned-tab.svg"
     color="#5bbad5">
   <link rel="icon" type="image/x-icon"
-    href="https://patrykbialek.github.io/eparki-ui/assets/img/narwianski/favicon.ico">
+    href="https://patrykbialek.github.io/eparki-ui-final/images/narwianski/favicon.ico">
   <meta name="msapplication-TileColor" content="#da532c">
   <meta name="theme-color" content="#ffffff">
 
@@ -28,8 +28,9 @@
     </script>
 
   <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="https://patrykbialek.github.io/eparki-ui/assets/css/fonts.css">
-  <link rel="stylesheet" href="https://patrykbialek.github.io/eparki-ui/assets/css/styles.css">
+
+  <link rel="stylesheet" href="https://patrykbialek.github.io/eparki-ui-final/styles/css/icon-fonts.css">
+  <link rel="stylesheet" href="https://patrykbialek.github.io/eparki-ui-final/styles/css/styles.min.css">
 
 </head>
 
@@ -42,13 +43,13 @@
       <div class="row mb-3">
         <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between u-width-100">
           <a class="navbar-brand" href="#">
-            <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_narwianski_horizontal_default.svg"
+            <img src="https://patrykbialek.github.io/eparki-ui-final/images/logo/logo_narwianski_horizontal_default.svg"
               alt="logo" class="c-app-header__logo-desktop c-app-header__logo-desktop--t-default"
               style="height: 50px;" />
-            <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_narwianski_horizontal_contrast.svg"
+            <img src="https://patrykbialek.github.io/eparki-ui-final/images/logo/logo_narwianski_horizontal_contrast.svg"
               alt="logo" class="c-app-header__logo-desktop c-app-header__logo-desktop--t-contrast"
               style="height: 50px;" />
-            <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_narwianski.png" alt="logo"
+            <img src="https://patrykbialek.github.io/eparki-ui-final/images/logo/logo_narwianski.png" alt="logo"
               class="c-app-header__logo-mobile" style="height: 50px;" />
           </a>
 
@@ -206,7 +207,7 @@
         <span class="nav-link__caption">Metody płatności</span>
       </a>
       <a href class="btn btn-outline-secondary mb-3 mr-3" data-toggle="modal" data-target="#selectPaymentMethods">
-        <span class="nav-link__caption">Wybierz methodę płatności</span>
+        <span class="nav-link__caption">Wybierz metodę płatności</span>
       </a>
     </div>
   </section>
@@ -410,6 +411,7 @@
   </div>
   <!--// Select ticket category modal end -->
 
+
   <!--// Select park feature modal -->
   <div class="modal fade" id="featureModal" tabindex="-1" role="dialog" aria-labelledby="featureModal"
     aria-hidden="true">
@@ -564,9 +566,7 @@
   <!--// Select park feature modal end -->
 
 
-
-
-  <!--// Select country region modal -->
+  <!--// Region modal -->
   <div class="modal fade " id="regionModal" tabindex="-1" role="dialog" aria-labelledby="regionModal"
     aria-hidden="true">
     <div class="modal-dialog">
@@ -661,7 +661,7 @@
       </div>
     </div>
   </div>
-  <!--// Select language modal end -->
+  <!--// Region modal end -->
 
 
   <!--// Sidebar modal -->
@@ -669,8 +669,8 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header border-0">
-          <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_narwianski.png" alt="logo"
-            class="c-app-header__logo-mobile" style="height: 50px;" />
+          <img src="https://patrykbialek.github.io/eparki-ui-final/images/logo/logo_narwianski.png" alt="logo"
+            style="height: 50px;">
           <button type="button" class="close" data-dismiss="modal" aria-label="Close">
             <span aria-hidden="true">
               <span class="icon-close"></span>
@@ -797,91 +797,87 @@
               <div class="tab-content" id="pills-tabContent" style="height: 70vh; overflow: auto;">
                 <div class="tab-pane fade show" id="pills-my-data" role="tabpanel" aria-labelledby="pills-my-data-tab">
                   <form class="c-profile__form">
-                    <div class="row mb-2">
-                      <div class="col-12">
+                    <div class="d-flex flex-column mb-2">
+                      <div class="form-group">
+                        <label for="name">Imię i nazwisko</label>
+                        <input type="text" class="form-control" id="name">
+                      </div>
+                      <div class="form-group">
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-check form-check-inline">
+                        <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                        <label class="form-check-label" for="toggle-invoice-data">
+                          Domyślne dane do faktury</label>
+                      </div>
+
+                      <div class="mt-2 is-hidden" id="invoice-data">
                         <div class="form-group">
-                          <label for="name">Imię i nazwisko</label>
+                          <label for="name">Nazwa firmy / Imię i nazwisko</label>
                           <input type="text" class="form-control" id="name">
                         </div>
                         <div class="form-group">
-                          <label for="email">Adres e-mail</label>
-                          <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-check form-check-inline">
-                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
-                          <label class="form-check-label" for="toggle-invoice-data">
-                            Domyślne dane do faktury</label>
-                        </div>
-
-                        <div class="mt-2 is-hidden" id="invoice-data">
-                          <div class="form-group">
-                            <label for="name">Nazwa firmy / Imię i nazwisko</label>
-                            <input type="text" class="form-control" id="name">
-                          </div>
-                          <div class="form-group">
-                            <label for="email">Ulica, nr budynku, nr lokalu</label>
-                            <input type="text" class="form-control" id="address">
-                          </div>
-                          <div class="form-group">
-                            <label for="email">Kod pocztowy</label>
-                            <input type="text" class="form-control" id="postal-code">
-                          </div>
-                          <div class="form-group">
-                            <label for="email">Miejscowość</label>
-                            <input type="text" class="form-control" id="city">
-                          </div>
-                          <div class="form-group">
-                            <label for="email">NIP (opcjonalnie)</label>
-                            <input type="text" class="form-control" id="nip">
-                          </div>
-                        </div>
-
-                        <div class="mt-3 mb-3">
-                          <div class="dropdown-divider"></div>
-                        </div>
-
-                        <div class="form-group">
-                          <label for="password">Obecne hasło</label>
-                          <div class="input-group mb-3">
-                            <input type="password" class="form-control" id="password">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button">
-                                <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
-                                <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
-                              </button>
-                            </div>
-                          </div>
+                          <label for="email">Ulica, nr budynku, nr lokalu</label>
+                          <input type="text" class="form-control" id="address">
                         </div>
                         <div class="form-group">
-                          <label for="password">Nowe hasło</label>
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="password" value="moje_haslo">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button">
-                                <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
-                                <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
-                              </button>
-                            </div>
-                          </div>
+                          <label for="email">Kod pocztowy</label>
+                          <input type="text" class="form-control" id="postal-code">
                         </div>
                         <div class="form-group">
-                          <label for="password">Powtórz nowe hasło</label>
-                          <div class="input-group mb-3">
-                            <input type="text" class="form-control" id="password" value="moje_haslo">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button">
-                                <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
-                                <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
-                              </button>
-                            </div>
+                          <label for="email">Miejscowość</label>
+                          <input type="text" class="form-control" id="city">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">NIP (opcjonalnie)</label>
+                          <input type="text" class="form-control" id="nip">
+                        </div>
+                      </div>
+
+                      <div class="mt-3 mb-3">
+                        <div class="dropdown-divider"></div>
+                      </div>
+
+                      <div class="form-group">
+                        <label for="password">Obecne hasło</label>
+                        <div class="input-group mb-3">
+                          <input type="password" class="form-control" id="password">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                              <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
+                              <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Nowe hasło</label>
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" id="password" value="moje_haslo">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                              <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
+                              <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
+                            </button>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Powtórz nowe hasło</label>
+                        <div class="input-group mb-3">
+                          <input type="text" class="form-control" id="password" value="moje_haslo">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                              <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
+                              <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
+                            </button>
                           </div>
                         </div>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12">
-                        <button type="button" class="btn btn-primary btn-lg btn-block">Zapisz zmiany</button>
-                      </div>
+                    <div class="d-flex">
+                      <button type="button" class="btn btn-primary btn-lg btn-block">Zapisz zmiany</button>
                     </div>
                   </form>
                 </div>
@@ -920,12 +916,12 @@
                           Status: <span class="is-not-finished">Nieopłacone</span>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-12 pt-3 pb-3">
+                      <div class="d-flex flex-column">
+                        <div class="pt-3 pb-3">
                           <button type="button" class="btn btn-primary btn-lg btn-block">
                             Przejdź do płatności (70,00 zł)</button>
                         </div>
-                        <div class="col-12 pt-3 pb-3">
+                        <div class="pt-3 pb-3">
                           <div class="c-profile-history__tickets-actions">
                             <a href="">
                               <span class="icon-delete"></span>
@@ -975,12 +971,12 @@
                           Status: <span class="is-finished">Opłacone</span>
                         </div>
                       </div>
-                      <div class="row">
-                        <div class="col-12 pt-3 pb-3">
+                      <div class="d-flex flex-column">
+                        <div class="pt-3 pb-3">
                           <button type="button" class="btn btn-primary btn-lg btn-block">
                             Kup ponownie (70,00 zł)</button>
                         </div>
-                        <div class="col-12 pt-3 pb-3">
+                        <div class="pt-3 pb-3">
                           <div class="c-profile-history__tickets-actions">
                             <a href="">
                               <span class="icon-delete"></span>
@@ -1010,6 +1006,7 @@
     </div>
   </div>
   <!--// Profile modal end -->
+
 
   <!--// Profile login modal -->
   <div class="modal fade" id="profileLoginModal" tabindex="-1" role="dialog" aria-labelledby="profileLoginModal"
@@ -1057,17 +1054,17 @@
                   </div>
                   <div class="col-6 mb-3">
                     <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-facebook">
-                      <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui/assets/img/facebook_logo.png"
+                      <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui-final/images/facebook_logo.png"
                         alt="facebook_logo">
-                      <img src="https://patrykbialek.github.io/eparki-ui/assets/img/facebook_text.png"
+                      <img src="https://patrykbialek.github.io/eparki-ui-final/images/facebook_text.png"
                         alt="facebook_text">
                     </button>
                   </div>
                   <div class="col-6 mb-3">
                     <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-google">
-                      <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui/assets/img/google_logo.png"
+                      <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui-final/images/google_logo.png"
                         alt="google_logo">
-                      <img src="https://patrykbialek.github.io/eparki-ui/assets/img/google_text.png" alt="google_text">
+                      <img src="https://patrykbialek.github.io/eparki-ui-final/images/google_text.png" alt="google_text">
                     </button>
                   </div>
                   <div class="col-12 d-flex justify-content-center">
@@ -1172,70 +1169,70 @@
                 <div class="tab-pane fade active show" id="pills-buy-login" role="tabpanel"
                   aria-labelledby="pills-buy-login-tab">
                   <form class="c-profile__form">
-                    <div class="row mb-2">
-                      <div class="col-12">
-                        <div class="form-group">
-                          <label for="email">Adres e-mail</label>
-                          <input type="email" class="form-control" id="email">
-                        </div>
-                        <div class="form-group">
-                          <label for="password">Hasło</label>
-                          <div class="input-group mb-3">
-                            <input type="password" class="form-control" id="password">
-                            <div class="input-group-append">
-                              <button class="btn btn-outline-secondary" type="button">
-                                <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
-                                <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
-                              </button>
-                            </div>
+                    <div class="d-flex flex-column mb-2">
+                      <div class="form-group">
+                        <label for="email">Adres e-mail</label>
+                        <input type="email" class="form-control" id="email">
+                      </div>
+                      <div class="form-group">
+                        <label for="password">Hasło</label>
+                        <div class="input-group mb-3">
+                          <input type="password" class="form-control" id="password">
+                          <div class="input-group-append">
+                            <button class="btn btn-outline-secondary" type="button">
+                              <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
+                              <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
+                            </button>
                           </div>
                         </div>
-                        <div class="form-check mb-3">
-                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
-                          <label class="form-check-label" for="toggle-invoice-data">
-                            Akceptuję regulamin serwisu</label>
-                        </div>
-                        <div class="form-check mb-3">
-                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
-                          <label class="form-check-label" for="toggle-invoice-data">
-                            Potrzebuję fakturę</label>
-                        </div>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                        <label class="form-check-label" for="toggle-invoice-data">
+                          Akceptuję regulamin serwisu</label>
+                      </div>
+                      <div class="form-check mb-3">
+                        <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                        <label class="form-check-label" for="toggle-invoice-data">
+                          Potrzebuję fakturę</label>
                       </div>
                     </div>
-                    <div class="row">
-                      <div class="col-12 mb-3">
+                    <div class="d-flex flex-column">
+                      <div class="mb-3">
                         <button type="button" class="btn btn-primary btn-lg btn-block">Zaloguj</button>
                       </div>
-                      <div class="col-6 mb-3">
-                        <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-facebook">
-                          <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui/assets/img/facebook_logo.png"
-                            alt="facebook_logo">
-                          <img src="https://patrykbialek.github.io/eparki-ui/assets/img/facebook_text.png"
-                            alt="facebook_text">
-                        </button>
+                      <div class="d-flex justify-content-center align-items-center">
+                        <div class="mb-3">
+                          <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-facebook">
+                            <img class="mr-2"
+                              src="https://patrykbialek.github.io/eparki-ui-final/images/facebook_logo.png"
+                              alt="facebook_logo">
+                            <img src="https://patrykbialek.github.io/eparki-ui-final/images/facebook_text.png"
+                              alt="facebook_text">
+                          </button>
+                        </div>
+                        <div class="mb-3">
+                          <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-google">
+                            <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui-final/images/google_logo.png"
+                              alt="google_logo">
+                            <img src="https://patrykbialek.github.io/eparki-ui-final/images/google_text.png"
+                              alt="google_text">
+                          </button>
+                        </div>
                       </div>
-                      <div class="col-6 mb-3">
-                        <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-google">
-                          <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui/assets/img/google_logo.png"
-                            alt="google_logo">
-                          <img src="https://patrykbialek.github.io/eparki-ui/assets/img/google_text.png"
-                            alt="google_text">
-                        </button>
-                      </div>
-                      <div class="col-12 d-flex justify-content-center">
+                      <div class="d-flex justify-content-center">
                         <button type="button" class="btn btn-link" id="button-go-to-register">Nie masz konta?
                           Zarejestruj
                           się</button>
                       </div>
                     </div>
-
                   </form>
                 </div>
                 <div class="tab-pane fade" id="pills-buy-without-login" role="tabpanel"
                   aria-labelledby="pills-my-history-tab">
                   <form class="c-profile__form">
-                    <div class="row mb-2">
-                      <div class="col-12">
+                    <div class="d-flex flex-column mb-2">
+                      <div>
                         <div class="form-group">
                           <label for="email">Adres e-mail</label>
                           <input type="email" class="form-control" id="email">
@@ -1276,9 +1273,7 @@
                         </div>
 
                       </div>
-                    </div>
-                    <div class="row">
-                      <div class="col-12 mb-3">
+                      <div class="mb-3">
                         <button type="button" class="btn btn-primary btn-lg btn-block">Zapłać (55,00zł)</button>
                       </div>
                     </div>
@@ -2006,7 +2001,7 @@
           <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">
             Pobierz bilet na urządzenie
           </button>
-          <button type="button" class="btn btn-light btn-lg btn-block" data-dismiss="modal">
+          <button type="button" class="btn btn-outline-secondary btn-lg btn-block" data-dismiss="modal">
             Zobacz historię zakupów
           </button>
         </div>
@@ -2016,7 +2011,7 @@
   <!--// Shopping summary modal end -->
 
 
-  <!--// Select country region modal -->
+  <!--// Cash points modal -->
   <div class="modal fade " id="cashPointsModal" tabindex="-1" role="dialog" aria-labelledby="cashPointsModal"
     aria-hidden="true">
     <div class="modal-dialog">
@@ -2037,7 +2032,7 @@
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   <i class="list-group-item__icon">
-                    <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_babiogorski.png" alt="">
+                    <img src="https://patrykbialek.github.io/eparki-ui-final/images/logo/logo_babiogorski.png" alt="">
                   </i>
                   Babiogórski - Kasa nr 1
                 </div>
@@ -2052,7 +2047,7 @@
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   <i class="list-group-item__icon">
-                    <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_babiogorski.png" alt="">
+                    <img src="https://patrykbialek.github.io/eparki-ui-final/images/logo/logo_babiogorski.png" alt="">
                   </i>
                   Babiogórski - Kasa nr 2
                 </div>
@@ -2066,7 +2061,7 @@
               <div class="d-flex align-items-center justify-content-between" style="width: 100%">
                 <div class="d-flex align-items-center">
                   <i class="list-group-item__icon">
-                    <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_babiogorski.png" alt="">
+                    <img src="https://patrykbialek.github.io/eparki-ui-final/images/logo/logo_babiogorski.png" alt="">
                   </i>
                   Babiogórski - Kasa nr 3
                 </div>
@@ -2086,7 +2081,7 @@
       </div>
     </div>
   </div>
-  <!--// Select language modal end -->
+  <!--// Cash points modal end -->
 
 
   <!--// Payment failed modal -->
