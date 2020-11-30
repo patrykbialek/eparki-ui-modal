@@ -29,8 +29,6 @@ class AppMenu {
 
   contrastToggle = document.querySelector("#contrast-theme-toggle");
 
-  summaryToggle = document.querySelector("#summary-toggle");
-
   init() {
     this.ticketsButton.addEventListener("click", this.toggleMenu.bind(this));
     this.aboutButton.addEventListener("click", this.toggleMenu.bind(this));
