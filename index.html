@@ -1,1 +1,2008 @@
+<html>
 
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>e-Parki - okna modalne</title>
+  <link rel="apple-touch-icon" sizes="180x180"
+    href="https://patrykbialek.github.io/eparki-ui/assets/img/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="32x32"
+    href="https://patrykbialek.github.io/eparki-ui/assets/img/favicon-32x32.png">
+  <link rel="icon" type="image/png" sizes="16x16"
+    href="https://patrykbialek.github.io/eparki-ui/assets/img/favicon-16x16.png">
+  <link rel="manifest" href="https://patrykbialek.github.io/eparki-ui/assets/img/site.webmanifest">
+  <link rel="mask-icon" href="https://patrykbialek.github.io/eparki-ui/assets/img/safari-pinned-tab.svg"
+    color="#5bbad5">
+  <link rel="icon" type="image/x-icon"
+    href="https://patrykbialek.github.io/eparki-ui/assets/img/narwianski/favicon.ico">
+  <meta name="msapplication-TileColor" content="#da532c">
+  <meta name="theme-color" content="#ffffff">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/css/bootstrap.min.css"
+    integrity="sha384-TX8t27EcRE3e/ihU7zmQxVncDAy5uIKz4rEkgIXeMed4M0jlfIDPvg6uqKI2xXr2" crossorigin="anonymous" />
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous">
+    </script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.5.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-ho+j7jyWK8fNQe+A12Hb8AhRq26LrZ/JpcUGGOn+Y7RsweNrtN/tE3MoK7ZeZDyx" crossorigin="anonymous">
+    </script>
+
+  <link href="https://fonts.googleapis.com/css2?family=Lato:wght@300;400;700&amp;display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://patrykbialek.github.io/eparki-ui/assets/css/fonts.css">
+  <link rel="stylesheet" href="https://patrykbialek.github.io/eparki-ui/assets/css/styles.css">
+
+</head>
+
+<body class="mb-5">
+
+  <!--// App header start -->
+  <section class="c-app-header">
+
+    <div class="container" id="page-content-wrapper">
+      <div class="row mb-3">
+        <nav class="navbar navbar-expand-lg navbar-light d-flex justify-content-between u-width-100">
+          <a class="navbar-brand" href="#">
+            <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_narwianski_horizontal_default.svg"
+              alt="logo" class="c-app-header__logo-desktop c-app-header__logo-desktop--t-default"
+              style="height: 50px;" />
+            <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_narwianski_horizontal_contrast.svg"
+              alt="logo" class="c-app-header__logo-desktop c-app-header__logo-desktop--t-contrast"
+              style="height: 50px;" />
+            <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_narwianski.png" alt="logo"
+              class="c-app-header__logo-mobile" style="height: 50px;" />
+          </a>
+
+          <div>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="" id="contrast-theme-toggle">
+                  <i class="nav-link__icon">
+                    <span class="icon-tonality"></span>
+                  </i>
+                  <span class="nav-link__caption" id="contrast-theme-toggle-caption">Wersja kontrastowa</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href class="nav-link" data-toggle="modal" data-target="#languageModal">
+                  <i class="nav-link__icon">
+                    <span class="icon-language"></span>
+
+                  </i>
+                  <span class="nav-link__caption">Wybierz język</span>
+                </a>
+              </li>
+              <li class="nav-item">
+                <a href class="nav-link c-app-header__basket" data-toggle="modal" data-target="#buyStepModal">
+                  <span class="c-app-header__basket-total">99</span>
+                  <i class="nav-link__icon">
+                    <span class="icon-shopping_cart"></span>
+                  </i>
+                  <span class="nav-link__caption">Koszyk</span></a>
+              </li>
+              <li class="nav-item border-left">
+                <a class="nav-link" href="#" tabindex="-1" data-toggle="modal" data-target="#profileModal">
+                  <i class="nav-link__icon">
+                    <span class="icon-account_circle"></span>
+                  </i>
+                  <span class="nav-link__caption">Anna Kowalska</span>
+                </a>
+              </li>
+            </ul>
+          </div>
+        </nav>
+      </div>
+      <div class="row d-flex justify-content-between">
+        <div class="c-mobile-section-title">
+          <a href="" class="c-mobile-section-title__menu-trigger mr-3 js-menu" data-toggle="modal"
+            data-target="#sideBar">
+            <span class="icon-menu"></span>
+          </a>
+          <h1 class="c-mobile-section-title__heading">
+            <span class="" id="heading-ticket">Sprzedaż biletów</span>
+            <span class="is-hidden" id="heading-about">O parku</span>
+            <span class="is-hidden" id="heading-contact">Formularz kontaktowy</span>
+          </h1>
+        </div>
+        <div class="c-mobile-buy-ticket p-2 pr-3">
+          <!-- <button type="button" class="btn btn-outline-primary">Kup bilet</button> -->
+          <button type="button" class="btn btn-outline-primary is-hidden" id="button-filters" data-toggle="modal"
+            data-target="#categoryModal">
+            <span class="icon-tune mr-2"></span>
+            Filtry (6)
+          </button>
+        </div>
+
+        <ul class="c-app-menu nav">
+          <li class="nav-item">
+            <a class="js-app-menu-link nav-link active js-tickets" href="#" id="tickets">Sprzedaż biletów</a>
+          </li>
+          <li class="nav-item">
+            <a class="js-app-menu-link nav-link  js-about" href="#" id="about">O parku</a>
+          </li>
+          <li class="nav-item">
+            <a class="js-app-menu-link nav-link js-contact" href="#" id="contact">Formularz kontaktowy</a>
+          </li>
+          <li class="nav-item dropdown">
+            <a class="nav-link dropdown-toggle" data-toggle="dropdown" href="#" role="button" aria-haspopup="true"
+              aria-expanded="false">Ważne dokumenty</a>
+            <div class="dropdown-menu">
+              <a class="dropdown-item" href="#">
+                <span class="mr-4">
+                  Klauzula informacyjna
+                </span>
+                <span class="icon-pdf"></span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <span class="mr-4">
+                  Podstawowe informacje
+                </span>
+                <span class="icon-pdf"></span>
+              </a>
+              <a class="dropdown-item" href="#">
+                <span class="mr-4">
+                  Regulamin parku
+                </span>
+                <span class="icon-pdf"></span>
+
+              </a>
+            </div>
+          </li>
+        </ul>
+      </div>
+      <div class="row">
+        <div class="c-app-header-container__border-bottom"> </div>
+      </div>
+    </div>
+    <div class="c-app-header__border-bottom">
+    </div>
+  </section>
+  <!--// App header end -->
+
+  <section class="container pt-5">
+    <div class="d-flex flex-wrap align-items-center justify-content-around">
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#languageModal">
+        <span class="nav-link__caption">Wybierz język</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#categoryModal">
+        <span class="nav-link__caption">Kategorie biletów</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#regionModal">
+        <span class="nav-link__caption">Rejon Polski</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#sideBar">
+        <span class="nav-link__caption">Menu</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#profileModal">
+        <span class="nav-link__caption">Profil - dane</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#profileLoginModal">
+        <span class="nav-link__caption">Profil - zaloguj</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#buyStepModal">
+        <span class="nav-link__caption">Krok zakupów</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#basketModal">
+        <span class="nav-link__caption">Koszyk</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#basketTicketModal">
+        <span class="nav-link__caption">Koszyk - bilet</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#ticketAddedModal">
+        <span class="nav-link__caption">Koszyk - bilet dodany</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#shoppingSummaryModal">
+        <span class="nav-link__caption">Podsumowanie zakupów</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#cashPointsModal">
+        <span class="nav-link__caption">Punkty kasowe</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#paymentFailed">
+        <span class="nav-link__caption">Płatność nie powiodła się</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#paymentMethods">
+        <span class="nav-link__caption">Metody płatności</span>
+      </a>
+      <a href class="btn btn-light mb-3" data-toggle="modal" data-target="#selectPaymentMethods">
+        <span class="nav-link__caption">Wybierz methodę płatności</span>
+      </a>
+    </div>
+  </section>
+
+
+  <!--// Select language modal -->
+  <div class="modal fade" id="languageModal" tabindex="-1" role="dialog" aria-labelledby="languageModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="myModalLabel">Wybierz język</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group list-group-flush">
+            <a href class="list-group-item list-group-item-action is-active" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-code"></span>
+                  </i>
+                  Język przeglądarki
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon"> PL </i>
+                  Polski
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon"> EN </i>
+                  Angielski
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon"> DE </i>
+                  Niemiecki
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Select language modal end -->
+
+
+  <!--// Select park feature modal -->
+  <div class="modal fade" id="categoryModal" tabindex="-1" role="dialog" aria-labelledby="categoryModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="parkFeatures">Filtry - Kategorie biletów</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body" style="height: 50vh; overflow: auto;">
+          <div class="list-group list-group-flush">
+            <a href class="list-group-item list-group-item-action is-active" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-done_all"></span>
+                  </i>
+                  Wszystkie kategorie (6)
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-ticket"></span>
+                  </i>
+                  Bilety wstępu
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-tent"></span>
+                  </i>
+                  Biwakowanie
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-camera"></span>
+                  </i>
+                  Fotografowanie (sesja zdjęciowa)
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-fishing"></span>
+                  </i>
+                  Wędkowanie
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-river"></span>
+                  </i>
+                  Wstęp na szlaki wodne
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" data-dismiss="modal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-card_gift"></span>
+                  </i>
+                  Pozostałe
+                </div>
+                <div>
+                  <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                  <span class="icon-check_box is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">
+            Potwierdź wybór (6)
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Select park feature modal end -->
+
+
+  <!--// Select country region modal -->
+  <div class="modal fade " id="regionModal" tabindex="-1" role="dialog" aria-labelledby="regionModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="countryRegion">Filtry - Rejon Polski</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group list-group-flush">
+            <a href class="list-group-item list-group-item-action">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-done_all"></span>
+                  </i>
+                  Cała Polska
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action is-active border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-north_west"></span>
+                  </i>
+                  Północny zachód (NW)
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-north_east"></span>
+                  </i>
+                  Północny wschód (NE)
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-south_east"></span>
+                  </i>
+                  Południowy wschód (SE)
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <span class="icon-south_west"></span>
+                  </i>
+                  Południowy zachód (SW)
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">
+            Potwierdź wybór
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Select language modal end -->
+
+
+  <!--// Sidebar modal -->
+  <div class="modal left fade" id="sideBar" tabindex="-1" role="dialog" aria-labelledby="sideBar" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header border-0">
+          <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_narwianski.png" alt="logo"
+            class="c-app-header__logo-mobile" style="height: 50px;" />
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="list-group list-group-flush">
+            <a href="" class="list-group-item list-group-item-action border-0 js-tickets">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Sprzedaż biletów
+                </div>
+              </div>
+            </a>
+            <a href="" class="list-group-item list-group-item-action border-0 js-about">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  O parku
+                </div>
+              </div>
+            </a>
+            <a href="" class="list-group-item list-group-item-action">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Mój profil
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action border-0 js-contact">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Formularz kontaktowy
+                </div>
+              </div>
+            </a>
+            <a href="" class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Adres i kontakt do parku
+                </div>
+              </div>
+            </a>
+            <a href="" class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Metody płatności
+                </div>
+              </div>
+            </a>
+            <a class="list-group-item list-group-item-action" data-dismiss="modal" aria-label="Close"
+              data-toggle="modal" data-target="#languageModal">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Wybierz język
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Klauzula informacyjna
+                </div>
+                <div>
+                  <span class="icon-pdf"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Podstawowe informacje
+                </div>
+                <div>
+                  <span class="icon-pdf"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  Regulamin parku
+                </div>
+                <div>
+                  <span class="icon-pdf"></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Sidebar modal end -->
+
+
+  <!--// Profile modal -->
+  <div class="modal fade" id="profileModal" tabindex="-1" role="dialog" aria-labelledby="profileModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="countryRegion">Profil</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="c-profile">
+            <section class="" id="form-my-data">
+              <ul class="nav nav-pills mb-3 c-profile-nav d-flex justify-content-around" id="pills-tab" role="tablist">
+                <li class="nav-item c-profile-nav__item">
+                  <a class="nav-link c-profile-nav__link" id="pills-my-data-tab" data-toggle="pill"
+                    href="#pills-my-data" role="tab" aria-controls="pills-my-data" aria-selected="true">Moje dane</a>
+                </li>
+                <li class="nav-item c-profile-nav__item">
+                  <a class="nav-link active c-profile-nav__link" id="pills-my-history-tab" data-toggle="pill"
+                    href="#pills-my-history" role="tab" aria-controls="pills-profmy-historyile"
+                    aria-selected="false">Moje zakupy</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent" style="height: 70vh; overflow: auto;">
+                <div class="tab-pane fade show" id="pills-my-data" role="tabpanel" aria-labelledby="pills-my-data-tab">
+                  <form class="c-profile__form">
+                    <div class="row mb-2">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="name">Imię i nazwisko</label>
+                          <input type="text" class="form-control" id="name">
+                        </div>
+                        <div class="form-group">
+                          <label for="email">Adres e-mail</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-check form-check-inline">
+                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                          <label class="form-check-label" for="toggle-invoice-data">
+                            Domyślne dane do faktury</label>
+                        </div>
+
+                        <div class="mt-2 is-hidden" id="invoice-data">
+                          <div class="form-group">
+                            <label for="name">Nazwa firmy / Imię i nazwisko</label>
+                            <input type="text" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Ulica, nr budynku, nr lokalu</label>
+                            <input type="text" class="form-control" id="address">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Kod pocztowy</label>
+                            <input type="text" class="form-control" id="postal-code">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Miejscowość</label>
+                            <input type="text" class="form-control" id="city">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">NIP (opcjonalnie)</label>
+                            <input type="text" class="form-control" id="nip">
+                          </div>
+                        </div>
+
+                        <div class="mt-3 mb-3">
+                          <div class="dropdown-divider"></div>
+                        </div>
+
+                        <div class="form-group">
+                          <label for="password">Obecne hasło</label>
+                          <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="password">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">
+                                <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
+                                <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Nowe hasło</label>
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="password" value="moje_haslo">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">
+                                <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
+                                <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Powtórz nowe hasło</label>
+                          <div class="input-group mb-3">
+                            <input type="text" class="form-control" id="password" value="moje_haslo">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">
+                                <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
+                                <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Zapisz zmiany</button>
+                      </div>
+                    </div>
+                  </form>
+                </div>
+                <div class="tab-pane fade active show" id="pills-my-history" role="tabpanel"
+                  aria-labelledby="pills-my-history-tab">
+                  <section class="c-profile-history">
+                    <div class="c-profile-history__item">
+                      <div class="c-profile-history__item-details mb-3">
+                        Transakcja z dnia: 17/09/2020 na Bieszczadzki Park Narodowy
+                      </div>
+                      <div class="c-profile-history__tickets">
+                        <div class="c-profile-history__ticket">
+                          <div class="c-profile-history__ticket-name mb-3">Zezwolenie 7-dniowe z łodzi na jezioro
+                            Wielkowiejskie
+                            Normalny</div>
+                          <div class="c-profile-history__ticket-details mb-3">
+                            Data: 14/09/2020 - 20/09/2020<br>
+                            Właściciel: Janusz Popanusz<br>
+                            Numer karty wędkarskiej: DFDFDF98u9ui<br>
+                          </div>
+                          <div class="c-profile-history__ticket-total mb-3">
+                            <div class="d-flex justify-content-between">
+                              <div>Ilość razem: <strong>4 szt</strong></div>
+                              <div>Suma: <strong>70,00 zł</strong></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="c-profile-history__tickets-total pt-2 pb-2">
+                          <div class="d-flex justify-content-between">
+                            <div>Ilość razem: <strong>4 szt</strong></div>
+                            <div>Suma: <strong>70,00 zł</strong></div>
+                          </div>
+                        </div>
+                        <div class="c-profile-history__tickets-status pt-3 pb-3">
+                          Status: <span class="is-not-finished">Nieopłacone</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 pt-3 pb-3">
+                          <button type="button" class="btn btn-primary btn-lg btn-block">
+                            Przejdź do płatności (70,00 zł)</button>
+                        </div>
+                        <div class="col-12 pt-3 pb-3">
+                          <div class="c-profile-history__tickets-actions">
+                            <a href="">
+                              <span class="icon-delete"></span>
+                            </a>
+                            <a href="">
+                              <span class="icon-fv_invoice"></span>
+                            </a>
+                            <a href="">
+                              <span class="icon-email"></span>
+                            </a>
+                            <a href="">
+                              <span class="icon-print"></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="c-profile-history__item">
+                      <div class="c-profile-history__item-details mb-3">
+                        Transakcja z dnia: 11/09/2020 na Bieszczadzki Park Narodowy
+                      </div>
+                      <div class="c-profile-history__tickets">
+                        <div class="c-profile-history__ticket">
+                          <div class="c-profile-history__ticket-name mb-3">Zezwolenie 7-dniowe z łodzi na jezioro
+                            Wielkowiejskie
+                            Normalny</div>
+                          <div class="c-profile-history__ticket-details mb-3">
+                            Data: 01/09/2020 - 03/09/2020<br>
+                            Właściciel: Janusz Popanusz<br>
+                            Numer karty wędkarskiej: DFDFDF98u9ui<br>
+                          </div>
+                          <div class="c-profile-history__ticket-total mb-3">
+                            <div class="d-flex justify-content-between">
+                              <div>Ilość razem: <strong>4 szt</strong></div>
+                              <div>Suma: <strong>70,00 zł</strong></div>
+                            </div>
+                          </div>
+                        </div>
+
+                        <div class="c-profile-history__tickets-total pt-2 pb-2">
+                          <div class="d-flex justify-content-between">
+                            <div>Ilość razem: <strong>4 szt</strong></div>
+                            <div>Suma: <strong>70,00 zł</strong></div>
+                          </div>
+                        </div>
+                        <div class="c-profile-history__tickets-status pt-3 pb-3">
+                          Status: <span class="is-finished">Opłacone</span>
+                        </div>
+                      </div>
+                      <div class="row">
+                        <div class="col-12 pt-3 pb-3">
+                          <button type="button" class="btn btn-primary btn-lg btn-block">
+                            Kup ponownie (70,00 zł)</button>
+                        </div>
+                        <div class="col-12 pt-3 pb-3">
+                          <div class="c-profile-history__tickets-actions">
+                            <a href="">
+                              <span class="icon-delete"></span>
+                            </a>
+                            <a href="">
+                              <span class="icon-fv_invoice"></span>
+                            </a>
+                            <a href="">
+                              <span class="icon-email"></span>
+                            </a>
+                            <a href="">
+                              <span class="icon-print"></span>
+                            </a>
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+
+                  </section>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--// Profile modal end -->
+
+  <!--// Profile login modal -->
+  <div class="modal fade" id="profileLoginModal" tabindex="-1" role="dialog" aria-labelledby="profileLoginModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="countryRegion">Profil</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="c-profile mt-0">
+            <section id="form-login">
+              <header class="mb-4">
+                <h1 class="c-section-header">Zaloguj się</h1>
+              </header>
+              <form class="c-profile__form">
+                <div class="row mb-2">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="email">Adres e-mail</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Hasło</label>
+                      <div class="input-group mb-3">
+                        <input type="password" class="form-control" id="password">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
+                            <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 mb-3">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Zaloguj</button>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-facebook">
+                      <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui/assets/img/facebook_logo.png"
+                        alt="facebook_logo">
+                      <img src="https://patrykbialek.github.io/eparki-ui/assets/img/facebook_text.png"
+                        alt="facebook_text">
+                    </button>
+                  </div>
+                  <div class="col-6 mb-3">
+                    <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-google">
+                      <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui/assets/img/google_logo.png"
+                        alt="google_logo">
+                      <img src="https://patrykbialek.github.io/eparki-ui/assets/img/google_text.png" alt="google_text">
+                    </button>
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+                    <button type="button" class="btn btn-link" id="button-go-to-register">Nie masz konta? Zarejestruj
+                      się</button>
+                  </div>
+                </div>
+
+              </form>
+            </section>
+            <section class="is-hidden" id="form-register">
+              <header class="mb-4">
+                <h1 class="c-section-header">Zarejestruj się</h1>
+              </header>
+              <form class="c-profile__form">
+                <div class="row mb-2">
+                  <div class="col-12">
+                    <div class="form-group">
+                      <label for="name">Imię i nazwisko</label>
+                      <input type="text" class="form-control" id="name">
+                    </div>
+                    <div class="form-group">
+                      <label for="email">Adres e-mail</label>
+                      <input type="email" class="form-control" id="email">
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Hasło</label>
+                      <div class="input-group mb-3">
+                        <input type="password" class="form-control" id="password">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
+                            <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="form-group">
+                      <label for="password">Powtórz hasło</label>
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" id="password" value="moje_haslo">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <span class="icon-visibility_on" style="display: block; color: #9E9E9E"></span>
+                            <span class="icon-visibility_off" style="display: none; color: #9E9E9E"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="row">
+                  <div class="col-12 mb-3">
+                    <button type="button" class="btn btn-primary btn-lg btn-block">Zarejestruj</button>
+                  </div>
+                  <div class="col-12 d-flex justify-content-center">
+                    <button type="button" class="btn btn-link" id="button-go-to-login">Masz już konto? Zaloguj
+                      się</button>
+                  </div>
+                </div>
+
+              </form>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--// Profile login modal end -->
+
+
+  <!--// Buy-step modal -->
+  <div class="modal fade" id="buyStepModal" tabindex="-1" role="dialog" aria-labelledby="buyStepModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="countryRegion">Dokończ zakup</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="c-profile">
+            <section class="" id="form-buy">
+              <ul class="nav nav-pills mb-3 c-profile-nav d-flex justify-content-around" id="pills-tab" role="tablist">
+                <li class="nav-item c-profile-nav__item">
+                  <a class="nav-link active c-profile-nav__link" id="pills-buy-login-tab" data-toggle="pill"
+                    href="#pills-buy-login" role="tab" aria-controls="pills-buy-login" aria-selected="true">Zaloguj
+                    się</a>
+                </li>
+                <li class="nav-item c-profile-nav__item">
+                  <a class="nav-link c-profile-nav__link" id="pills-buy-without-login-tab" data-toggle="pill"
+                    href="#pills-buy-without-login" role="tab" aria-controls="pills-buy-without-login"
+                    aria-selected="false">Kup bez logowania</a>
+                </li>
+              </ul>
+              <div class="tab-content" id="pills-tabContent" style="height: 70vh; overflow: auto;">
+                <div class="tab-pane fade active show" id="pills-buy-login" role="tabpanel"
+                  aria-labelledby="pills-buy-login-tab">
+                  <form class="c-profile__form">
+                    <div class="row mb-2">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="email">Adres e-mail</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-group">
+                          <label for="password">Hasło</label>
+                          <div class="input-group mb-3">
+                            <input type="password" class="form-control" id="password">
+                            <div class="input-group-append">
+                              <button class="btn btn-outline-secondary" type="button">
+                                <span class="icon-visibility_on" style="display: none; color: #9E9E9E"></span>
+                                <span class="icon-visibility_off" style="display: block; color: #9E9E9E"></span>
+                              </button>
+                            </div>
+                          </div>
+                        </div>
+                        <div class="form-check mb-3">
+                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                          <label class="form-check-label" for="toggle-invoice-data">
+                            Akceptuję regulamin serwisu</label>
+                        </div>
+                        <div class="form-check mb-3">
+                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                          <label class="form-check-label" for="toggle-invoice-data">
+                            Potrzebuję fakturę</label>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Zaloguj</button>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-facebook">
+                          <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui/assets/img/facebook_logo.png"
+                            alt="facebook_logo">
+                          <img src="https://patrykbialek.github.io/eparki-ui/assets/img/facebook_text.png"
+                            alt="facebook_text">
+                        </button>
+                      </div>
+                      <div class="col-6 mb-3">
+                        <button type="button" class="btn btn-light btn-lg btn-block c-profile__login-google">
+                          <img class="mr-2" src="https://patrykbialek.github.io/eparki-ui/assets/img/google_logo.png"
+                            alt="google_logo">
+                          <img src="https://patrykbialek.github.io/eparki-ui/assets/img/google_text.png"
+                            alt="google_text">
+                        </button>
+                      </div>
+                      <div class="col-12 d-flex justify-content-center">
+                        <button type="button" class="btn btn-link" id="button-go-to-register">Nie masz konta?
+                          Zarejestruj
+                          się</button>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+                <div class="tab-pane fade" id="pills-buy-without-login" role="tabpanel"
+                  aria-labelledby="pills-my-history-tab">
+                  <form class="c-profile__form">
+                    <div class="row mb-2">
+                      <div class="col-12">
+                        <div class="form-group">
+                          <label for="email">Adres e-mail</label>
+                          <input type="email" class="form-control" id="email">
+                        </div>
+                        <div class="form-check mb-3">
+                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option1">
+                          <label class="form-check-label" for="toggle-invoice-data">
+                            Akceptuję regulamin serwisu</label>
+                        </div>
+                        <div class="form-check mb-3">
+                          <input class="form-check-input" type="checkbox" id="toggle-invoice-data" value="option2"
+                            checked>
+                          <label class="form-check-label" for="toggle-invoice-data">
+                            Potrzebuję fakturę</label>
+                        </div>
+
+                        <div class="mt-2" id="invoice-data">
+                          <div class="form-group">
+                            <label for="name">Nazwa firmy / Imię i nazwisko</label>
+                            <input type="text" class="form-control" id="name">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Ulica, nr budynku, nr lokalu</label>
+                            <input type="text" class="form-control" id="address">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Kod pocztowy</label>
+                            <input type="text" class="form-control" id="postal-code">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">Miejscowość</label>
+                            <input type="text" class="form-control" id="city">
+                          </div>
+                          <div class="form-group">
+                            <label for="email">NIP (opcjonalnie)</label>
+                            <input type="text" class="form-control" id="nip">
+                          </div>
+                        </div>
+
+                      </div>
+                    </div>
+                    <div class="row">
+                      <div class="col-12 mb-3">
+                        <button type="button" class="btn btn-primary btn-lg btn-block">Zapłać (55,00zł)</button>
+                      </div>
+                    </div>
+
+                  </form>
+                </div>
+              </div>
+            </section>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!--// Buy-step end -->
+
+
+  <!--// Basket modal -->
+  <div class="modal fade modal--full" id="basketModal" tabindex="-1" role="dialog" aria-labelledby="basketModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="basket">Koszyk</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <section class="c-basket">
+            <div class="c-basket__tictets">
+              <div class="c-basket__tickets-park-name mb-2">
+                <div class="c-basket__tickets-park-name-caption">Narwiański Park Narodowy</div>
+                <div class="c-basket__tickets-park-name-decoration"></div>
+              </div>
+              <div class="c-basket__tickets-header">
+                <div class="row">
+                  <div class="col-6">
+                    <input type="checkbox" class="mr-3">
+                    Nazwa biletu</div>
+                  <div class="col-4">Uzupełnij dane</div>
+                  <div class="col-2">
+                    <div class="text-right">Cena</div>
+                  </div>
+                </div>
+              </div>
+              <div class="c-basket__tickets-list">
+
+                <div class="c-basket__tickets-item">
+                  <div class="c-basket__tickets-item-on-desktop">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-6">
+                            <div class="d-flex flex-row mb-3 align-items-center">
+                              <input type="checkbox" class="mr-3">
+                              <div>
+                                <div class="c-basket__tickets-item-name font-weight-bold">
+                                  Bilet wstępu 1-dniowy normalny
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-md-4">
+                            <input type="text" class="form-control" placeholder="Imię i nazwisko okaziciela">
+                          </div>
+                          <div class="col-sm-12 col-md-2">
+                            <div class="text-right font-weight-bold">5,00 zł</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="c-basket__tickets-item-additional font-italic mb-2">
+                          Rogożynek - Lipsk 8 km; Lipsk - Kamienna Nowa 18 km; Kanał Augustowski: Śluza Sosnowo -
+                          Dębowo
+                          13,2 km (w BbPN 8 km)
+                        </div>
+                        <div class="c-basket__tickets-item-date">
+                          Data obowiązywania 19/02/2020
+                        </div>
+                      </div>
+                      <div class="col-4">
+                        <div class="mt-2 mb-2 text-right">
+                          <button type="button" class="btn btn-light">Kopiuj do wszystkich</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-basket__tickets-item-on-mobile">
+                    <div class="row">
+                      <div class="col-sm-12 mb-2">
+                        <div class="d-flex flex-row mb-2 justify-content-between">
+                          <div class="d-flex align-items-center">
+                            <input type="checkbox" class="mr-3">
+                            <div class="c-basket__tickets-item-name font-weight-bold">
+                              Bilet wstępu 1-dniowy normalny
+                            </div>
+                          </div>
+                          <div>
+                            <div class="text-right font-weight-bold">5,00 zł</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-2">
+                        <div class="c-basket__tickets-item-additional font-italic mb-2">
+                          Rogożynek - Lipsk 8 km; Lipsk - Kamienna Nowa 18 km; Kanał Augustowski: Śluza Sosnowo - Dębowo
+                          13,2 km (w BbPN 8 km)
+                        </div>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <div class="c-basket__tickets-item-date d-flex justify-content-between">
+                          <div>Data obowiązywania</div>
+                          <div>19/02/2020</div>
+
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Imię i nazwisko okaziciela">
+                        <div class="mt-2 mb-2 text-right">
+                          <button type="button" class="btn btn-light">Kopiuj do wszystkich</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+
+                <div class="c-basket__tickets-item">
+                  <div class="c-basket__tickets-item-on-desktop">
+                    <div class="row">
+                      <div class="col-12">
+                        <div class="row">
+                          <div class="col-sm-12 col-md-6">
+                            <div class="d-flex flex-row mb-3 align-items-center">
+                              <input type="checkbox" class="mr-3">
+                              <div>
+                                <div class="c-basket__tickets-item-name font-weight-bold">
+                                  Bilet wstępu 1-dniowy normalny
+                                </div>
+                              </div>
+                            </div>
+                          </div>
+                          <div class="col-sm-12 col-md-4">
+                            <input type="text" class="form-control" placeholder="Imię i nazwisko okaziciela">
+                          </div>
+                          <div class="col-sm-12 col-md-2">
+                            <div class="text-right font-weight-bold">5,00 zł</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-6">
+                        <div class="c-basket__tickets-item-additional font-italic mb-2">
+                          Rogożynek - Lipsk 8 km; Lipsk - Kamienna Nowa 18 km; Kanał Augustowski: Śluza Sosnowo -
+                          Dębowo
+                          13,2 km (w BbPN 8 km)
+                        </div>
+                        <div class="c-basket__tickets-item-date">
+                          Data obowiązywania 19/02/2020
+                        </div>
+                      </div>
+                      <div class="col-4">
+                      </div>
+                    </div>
+                  </div>
+                  <div class="c-basket__tickets-item-on-mobile">
+                    <div class="row">
+                      <div class="col-sm-12 mb-2">
+                        <div class="d-flex flex-row mb-2 justify-content-between">
+                          <div class="d-flex align-items-center">
+                            <input type="checkbox" class="mr-3">
+                            <div class="c-basket__tickets-item-name font-weight-bold">
+                              Bilet wstępu 1-dniowy normalny
+                            </div>
+                          </div>
+                          <div>
+                            <div class="text-right font-weight-bold">5,00 zł</div>
+                          </div>
+                        </div>
+                      </div>
+                      <div class="col-12 mb-2">
+                        <div class="c-basket__tickets-item-additional font-italic mb-2">
+                          Rogożynek - Lipsk 8 km; Lipsk - Kamienna Nowa 18 km; Kanał Augustowski: Śluza Sosnowo - Dębowo
+                          13,2 km (w BbPN 8 km)
+                        </div>
+                      </div>
+                      <div class="col-12 mb-3">
+                        <div class="c-basket__tickets-item-date d-flex justify-content-between">
+                          <div>Data obowiązywania</div>
+                          <div>19/02/2020</div>
+
+                        </div>
+                      </div>
+                      <div class="col-sm-12 col-md-4">
+                        <input type="text" class="form-control" placeholder="Imię i nazwisko okaziciela">
+                        <div class="mt-2 mb-2 text-right">
+                          <button type="button" class="btn btn-light">Kopiuj do wszystkich</button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div class="mt-3 mb-3">
+                  <button type="button" class="btn btn-light" style="color: #dc3545">Usuń zaznaczone</button>
+                </div>
+              </div>
+            </div>
+            <div class="c-basket__total text-right font-weight-bold">
+              <span class="mr-5">SUMA</span>
+              <span>55,00 zł</span>
+            </div>
+          </section>
+        </div>
+        <div class="modal-footer u-on-desktop">
+          <button type="button" class="btn btn-light btn-lg col-md-4 col-lg-3" data-dismiss="modal">
+            Kontynuuj zakupy
+          </button>
+          <button type="button" class="btn btn-primary btn-lg ml-3 col-md-4 col-lg-3" data-dismiss="modal">
+            Zapłać (55,00 zł)
+          </button>
+        </div>
+        <div class="modal-footer u-on-mobile">
+          <button type="button" class="btn btn-primary btn-lg btn-block mb-3" data-dismiss="modal">
+            Zapłać (55,00 zł)
+          </button>
+          <button type="button" class="btn btn-light btn-lg btn-block" data-dismiss="modal">
+            Kontynuuj zakupy
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Basket modal end -->
+
+
+  <!--// Basket ticket modal -->
+  <div class="modal fade modal--full" id="basketTicketModal" tabindex="-1" role="dialog"
+    aria-labelledby="basketTicketModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header flex-column">
+          <div class="d-flex justify-content-between mb-3" style="width: 100%">
+            <h4 class="modal-title" id="basket">Bilet wstępu na szlak wodny - Opłata normalna</h4>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">
+                <span class="icon-close"></span>
+              </span>
+            </button>
+          </div>
+          <div class="d-flex justify-content-between" style="width: 100%; font-size: 14px;">
+            <div id="accordion" style="width: 100%;">
+              <div class="d-flex justify-content-between">
+                <button style="    margin-left: -14px;" class="btn btn-link" data-toggle="collapse"
+                  data-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">Opis biletu</button>
+                <div class="text-right" style="color: #000; font-size:16px">
+                  <span class="font-weight-bold">5,00 zł</span>
+                </div>
+              </div>
+
+              <div id="collapseOne" class="collapse" aria-labelledby="headingOne" data-parent="#accordion">
+                <p class="mb-1">Opłata upoważnia jedną osobę do wstępu na szlaki wodne na terenie parku narodowego
+                  przez jeden
+                  dzień. Bilet jest imienny.</p>
+                <p class="mb-1">Dzieci i młodzież do 18 roku życia muszą przebywać pod opieką osoby dorosłej.</p>
+                <p class="mb-1">Cena nie zawiera opłaty za wypożyczenie sprzętu.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="modal-body">
+          <section class="c-buy-ticket u-on-desktop">
+            <div class="row">
+              <div class="c-buy-ticket__tickets col-4">
+                <header>
+                  <h2>Bilet</h2>
+                </header>
+                <div class="c-buy-ticket__detail is-active">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="col-3">
+                      Bilet 1
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-light btn-block d-flex justify-content-between">
+                        <span class="mr-2">19/09/2020 - 22/09/2020</span>
+                        <span class="icon-date_range"></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-3">
+                      <a>
+                        <span class="icon-delete"></span>
+                      </a>
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-outline-primary btn-block d-flex justify-content-between">
+                        <span>Zmień trasę szlaku (7)</span>
+                        <span class="icon-arrow-right"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-buy-ticket__detail">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="col-3">
+                      Bilet 2
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-light btn-block d-flex justify-content-between">
+                        <span class="mr-2">19/09/2020 - 22/09/2020</span>
+                        <span class="icon-date_range"></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-3">
+                      <a>
+                        <span class="icon-delete"></span>
+                      </a>
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-light btn-block d-flex justify-content-between">
+                        <span>Zmień trasę szlaku (7)</span>
+                        <span class="icon-arrow_right"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-buy-ticket__detail">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="col-3">
+                      Bilet 3
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-light btn-block d-flex justify-content-between">
+                        <span class="mr-2">19/09/2020 - 22/09/2020</span>
+                        <span class="icon-date_range"></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-3">
+                      <a>
+                        <span class="icon-delete"></span>
+                      </a>
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-light btn-block d-flex justify-content-between">
+                        <span>Zmień trasę szlaku (7)</span>
+                        <span class="icon-arrow_right"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-buy-ticket__detail">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="col-3">
+                      Bilet 4
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-light btn-block d-flex justify-content-between">
+                        <span class="mr-2">19/09/2020 - 22/09/2020</span>
+                        <span class="icon-date_range"></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-3">
+                      <a>
+                        <span class="icon-delete"></span>
+                      </a>
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-light btn-block d-flex justify-content-between">
+                        <span>Zmień trasę szlaku (7)</span>
+                        <span class="icon-arrow_right"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-buy-ticket__detail">
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="col-3">
+                      Bilet 5
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-light btn-block d-flex justify-content-between">
+                        <span class="mr-2">19/09/2020 - 22/09/2020</span>
+                        <span class="icon-date_range"></span>
+                      </button>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <div class="col-3">
+                      <a>
+                        <span class="icon-delete"></span>
+                      </a>
+                    </div>
+                    <div class="col-9">
+                      <button class="btn btn-light btn-block d-flex justify-content-between">
+                        <span>Zmień trasę szlaku (7)</span>
+                        <span class="icon-arrow_right"></span>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-buy-ticket__add-more">
+                  <button class="btn btn-outline-primary d-flex align-items-center">
+                    <span class="mr-2">
+                      <span class="icon-add_circle_outline"></span>
+                    </span>
+                    <span>Dodaj kolejny bilet</span>
+                  </button>
+                </div>
+              </div>
+              <div class="c-buy-ticket__option col-8">
+                <header>
+                  <h2>Wybierz opcję dla bilet 1</h2>
+                </header>
+                <div class="c-buy-ticket__option-routes">
+                  <header>
+                    <h2>Wybierz z listy odcinki trasy kajakowej, które planujesz przebyć</h2>
+                  </header>
+                  <div class="list-group">
+                    <a href class="list-group-item list-group-item-action border-0">
+                      <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                        <div class="d-flex align-items-center">
+                          Rogożynek - Lipsk 8 km
+                        </div>
+                        <div>
+                          <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                          <span class="icon-check_box is-checked-item"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href class="list-group-item list-group-item-action border-0">
+                      <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                        <div class="d-flex align-items-center">
+                          Lipsk - Kamienna Nowa 18 km
+                        </div>
+                        <div>
+                          <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                          <span class="icon-check_box is-checked-item"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href class="list-group-item list-group-item-action border-0">
+                      <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                        <div class="d-flex align-items-center">
+                          Kamienna Nowa - Podhorodnianka 17,5 km
+                        </div>
+                        <div>
+                          <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                          <span class="icon-check_box is-checked-item"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href class="list-group-item list-group-item-action border-0">
+                      <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                        <div class="d-flex align-items-center">
+                          Podhorodnianka - Sztabin 1,5 km
+                        </div>
+                        <div>
+                          <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                          <span class="icon-check_box is-checked-item"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href class="list-group-item list-group-item-action border-0">
+                      <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                        <div class="d-flex align-items-center">
+                          Podhorodnianka - Sztabin 1,5 km
+                        </div>
+                        <div>
+                          <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                          <span class="icon-check_box is-checked-item"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href class="list-group-item list-group-item-action border-0">
+                      <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                        <div class="d-flex align-items-center">
+                          Podhorodnianka - Sztabin 1,5 km
+                        </div>
+                        <div>
+                          <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                          <span class="icon-check_box is-checked-item"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href class="list-group-item list-group-item-action border-0">
+                      <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                        <div class="d-flex align-items-center">
+                          Podhorodnianka - Sztabin 1,5 km
+                        </div>
+                        <div>
+                          <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                          <span class="icon-check_box is-checked-item"></span>
+                        </div>
+                      </div>
+                    </a>
+                    <a href class="list-group-item list-group-item-action border-0">
+                      <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                        <div class="d-flex align-items-center">
+                          Podhorodnianka - Sztabin 1,5 km
+                        </div>
+                        <div>
+                          <span class="icon-check_box_outline_blank is-unchecked-item"></span>
+                          <span class="icon-check_box is-checked-item"></span>
+                        </div>
+                      </div>
+                    </a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+          <section class="c-buy-ticket u-on-mobile">
+            <div class="row">
+              <div class="c-buy-ticket__tickets col-12">
+                <div class="d-flex justify-content-between align-items-center">
+                  <div>
+                    Liczba biletów
+                  </div>
+                  <div style="width: 164px;">
+                    <div class="input-group">
+                      <div class="input-group-prepend">
+                        <button class="btn btn-outline-secondary" type="button">-</button>
+                      </div>
+                      <input type="text" value="1" max="99" min="1" maxlength="2" class="form-control text-center">
+                      <div class="input-group-append">
+                        <button class="btn btn-outline-secondary" type="button">+</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+                <div class="c-buy-ticket__detail">
+                  <div class="d-flex justify-content-end align-items-center mb-3">
+                    Data obowiązywania biletu
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="font-weight-bold">
+                      Bilet 1
+                    </div>
+                    <div style="width: 164px;">
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="19/09/2020">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <span class="icon-date_range"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-light btn-block d-flex justify-content-between">
+                      <span>Zmień trasę szlaku (7)</span>
+                      <span class="icon-arrow_right"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="c-buy-ticket__detail">
+                  <div class="d-flex justify-content-end align-items-center mb-3">
+                    Data obowiązywania biletu
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="font-weight-bold">
+                      Bilet 1
+                    </div>
+                    <div style="width: 164px;">
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="19/09/2020">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <span class="icon-date_range"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-light btn-block d-flex justify-content-between">
+                      <span>Zmień trasę szlaku (7)</span>
+                      <span class="icon-arrow_right"></span>
+                    </button>
+                  </div>
+                </div>
+                <div class="c-buy-ticket__detail">
+                  <div class="d-flex justify-content-end align-items-center mb-3">
+                    Data obowiązywania biletu
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center mb-3">
+                    <div class="font-weight-bold">
+                      Bilet 1
+                    </div>
+                    <div style="width: 164px;">
+                      <div class="input-group mb-3">
+                        <input type="text" class="form-control" value="19/09/2020">
+                        <div class="input-group-append">
+                          <button class="btn btn-outline-secondary" type="button">
+                            <span class="icon-date_range"></span>
+                          </button>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="d-flex justify-content-between align-items-center">
+                    <button class="btn btn-light btn-block d-flex justify-content-between">
+                      <span>Zmień trasę szlaku (7)</span>
+                      <span class="icon-arrow_right"></span>
+                    </button>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </section>
+        </div>
+        <div class="modal-footer u-on-desktop c-buy-ticket__modal-footer">
+          <div class="d-flex align-items-center justify-content-between" style="width:100%">
+            <div class="col-4 pl-0">
+              <div class="c-buy-ticket__total d-flex justify-content-between align-items-center">
+                <div>Ilość razem: <span class="font-weight-bold">6 sztuk</span></div>
+                <div>Suma: <span class="font-weight-bold">30,00 zł</span></div>
+              </div>
+            </div>
+            <div class="col-8 d-flex justify-content-end">
+              <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal" data-toggle="modal"
+                data-target="#ticketAddedModal">
+                Dodaj do koszyka (30,00 zł)
+              </button>
+            </div>
+          </div>
+        </div>
+        <div class="modal-footer u-on-mobile">
+          <div class="d-flex flex-column">
+            <div class="c-buy-ticket__total d-flex flex-row justify-content-between align-items-start mb-3">
+              <div>Ilość razem: <span class="font-weight-bold">6 szt.</span></div>
+              <div>Suma: <span class="font-weight-bold">30,00 zł</span></div>
+            </div>
+            <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal" data-toggle="modal"
+              data-target="#ticketAddedModal">
+              Dodaj do koszyka (30,00 zł)
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Basket ticket modal end -->
+
+
+  <!--// Ticket added modal -->
+  <div class="modal fade modal--full-width" id="ticketAddedModal" tabindex="-1" role="dialog"
+    aria-labelledby="ticketAddedModal" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="basket">Bilety dodane do koszyka</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <div class="d-flex justify-content-between align-items-center">
+            <div>Bilet wstępu na szlak wodny - Opłata normalna - 6 szt.</div>
+            <div class="text-right" style="min-width: 104px;">30,00 zł</div>
+          </div>
+        </div>
+        <div class="modal-footer u-on-desktop">
+          <button type="button" class="btn btn-light btn-lg col-md-4 col-lg-3" data-dismiss="modal">
+            Kontynuuj zakupy
+          </button>
+          <button type="button" class="btn btn-primary btn-lg ml-3 col-md-4 col-lg-3" data-dismiss="modal"
+            data-toggle="modal" data-target="#basketModal">
+            Idź do koszyka
+          </button>
+        </div>
+        <div class="modal-footer u-on-mobile">
+          <button type="button" class="btn btn-primary btn-lg btn-block mb-3" data-dismiss="modal">
+            Zapłać (55,00 zł)
+          </button>
+          <button type="button" class="btn btn-light btn-lg btn-block" data-dismiss="modal">
+            Kontynuuj zakupy
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Ticket added modal end -->
+
+
+  <!--// Shopping summary modal -->
+  <div class="modal fade" id="shoppingSummaryModal" tabindex="-1" role="dialog" aria-labelledby="shoppingSummaryModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="parkFeatures">Zakupy zakończone pomyślnie</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body" style="height: 50vh; overflow: auto;">
+          <p class="font-weight-bold">
+            Dziękujemy za zakupy.
+          </p>
+          <p>
+            Bilet został wysłany na podany adres email:
+          </p>
+          <p class="font-weight-bold">
+            imie.nazwisko@domena.com
+          </p>
+          <p>
+            Przed przybyciem do parku wydrukuj bilet lub pobierz go na urządzenie mobilne i okaż przy wejściu wraz z
+            dokumentem tożsamości oraz dokumentami uprawniającymi do ulg. </p>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">
+            Pobierz bilet na urządzenie
+          </button>
+          <button type="button" class="btn btn-light btn-lg btn-block" data-dismiss="modal">
+            Zobacz historię zakupów
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Shopping summary modal end -->
+
+
+  <!--// Select country region modal -->
+  <div class="modal fade " id="cashPointsModal" tabindex="-1" role="dialog" aria-labelledby="cashPointsModal"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" id="countryRegion">Profil</h4>
+          <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+            <span aria-hidden="true">
+              <span class="icon-close"></span>
+            </span>
+          </button>
+        </div>
+        <div class="modal-body">
+          <h5 class="font-weight-bold mb-4">Anna Kowalska - kasjer</h5>
+          <div class="list-group list-group-flush">
+            <h6 class="">Wybierz punkt kasowy</h6>
+            <a href class="list-group-item list-group-item-action border-0" style="background-color: transparent;">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_babiogorski.png" alt="">
+                  </i>
+                  Babiogórski - Kasa nr 1
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action is-active border-0"
+              style="background-color: transparent;">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_babiogorski.png" alt="">
+                  </i>
+                  Babiogórski - Kasa nr 2
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+            <a href class="list-group-item list-group-item-action border-0" style="background-color: transparent;">
+              <div class="d-flex align-items-center justify-content-between" style="width: 100%">
+                <div class="d-flex align-items-center">
+                  <i class="list-group-item__icon">
+                    <img src="https://patrykbialek.github.io/eparki-ui/assets/img/logo/logo_babiogorski.png" alt="">
+                  </i>
+                  Babiogórski - Kasa nr 3
+                </div>
+                <div>
+                  <span class="icon-radio_button_unchecked is-unchecked-item"></span>
+                  <span class="icon-radio_button_checked is-checked-item"></span>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-primary btn-lg btn-block" data-dismiss="modal">
+            Potwierdź wybór
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Select language modal end -->
+
+
+  <!--// Payment failed modal -->
+  <div class="modal fade " id="paymentFailed" tabindex="-1" role="dialog" aria-labelledby="paymentFailed"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p class="mb-5 font-weight-bold">Płatność nie powiodła się.</p>
+
+          <button type="button" class="btn btn-primary btn-lg btn-block mb-3" data-dismiss="modal">
+            Spróbuj ponownie
+          </button>
+          <button type="button" class="btn btn-outline-primary btn-lg btn-block mb-3" data-dismiss="modal">
+            Zmień metodą na ‘Gotówka’
+          </button>
+          <button type="button" class="btn btn-outline-primary btn-lg btn-block mb-3" data-dismiss="modal">
+            Anuluj
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Payment failed modal end -->
+
+
+  <!--// Payment methods modal -->
+  <div class="modal fade " id="paymentMethods" tabindex="-1" role="dialog" aria-labelledby="paymentMethods"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p class="mb-5 font-weight-bold">
+            Wybierz metodę płaności
+          </p>
+          <button type="button" class="btn btn-outline-primary btn-lg btn-block mb-3" data-dismiss="modal">
+            Karta (17,50 zł)
+          </button>
+          <button type="button" class="btn btn-outline-primary btn-lg btn-block mb-3" data-dismiss="modal">
+            Gotówka (17,50 zł)
+          </button>
+          <button type="button" class="btn btn-outline-primary btn-lg btn-block mb-3" data-dismiss="modal">
+            Wróć
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Payment methods modal end -->
+
+
+  <!--// Select payment methods modal -->
+  <div class="modal fade " id="selectPaymentMethods" tabindex="-1" role="dialog" aria-labelledby="selectPaymentMethods"
+    aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-body">
+          <p class="mb-5 font-weight-bold">
+            Płatność kartą czy gotówką?
+          </p>
+          <button type="button" class="btn btn-primary btn-lg btn-block mb-3" data-dismiss="modal">
+            Karta
+          </button>
+          <button type="button" class="btn btn-outline-secondary btn-lg btn-block mb-3" data-dismiss="modal">
+            Gotówka
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!--// Select payment methods modal end -->
+
+
+  <script src="index.js"></script>
+</body>
+
+</html>
